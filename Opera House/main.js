@@ -28,8 +28,9 @@ function exposeRight(){
 //Temporary text
 let tempText = document.querySelector(".tempText");
 
-let theatre = document.querySelector(".title"); //getting "opera" title from htm
-let opera = document.querySelectorAll(".title")[1]; //getting "theatre" title from htm
+let theatre = document.querySelector(".title"); //getting "theatre" title from htm
+let opera = document.querySelectorAll(".title")[1]; //getting "opera" title from htm
+let circle = document.querySelector(".circle");
 let bottomFinished = false;
 let topFinished = false;
 
@@ -40,6 +41,14 @@ let TTInterval = setInterval(() =>{
     if(isExposedLeft && isExposedRight){
         tempText.style.display = 'none';
         clearInterval(TTInterval);
+
+////Arrow showing
+        circle.style.zIndex = "1";
+        circle.style.animation = '1s turnUp';
+        setTimeout(() =>{
+            circle.style.bottom = "5%";
+        }, 1000)
+////Arrow showing end
 
 ///// title box animation
         let BAInterval = setInterval(() =>{
@@ -87,7 +96,26 @@ let TTInterval = setInterval(() =>{
 ////title box animation end
     }
 }, 10)
-//Title box animation
 
 
+///MAIN SECTION///////////////////
+
+circle.addEventListener('click', () =>{
+    let main = document.querySelector('main');
+    let sctTrns = document.querySelector('.sectionTransition');
+    let sections = document.querySelectorAll('main section');
+    
+    main.style.display = 'block';
+    sctTrns.style.display = 'block';
+    sections.forEach(section => {
+        section.style.display = 'flex';
+    });
+
+    setTimeout(() => {
+        circle.style.animation = '1s turnDown';
+        setTimeout(() =>{
+            circle.style.bottom = '-5%';
+        }, 1000)   
+    }, 250);
+})
 
