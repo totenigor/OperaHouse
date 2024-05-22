@@ -107,8 +107,18 @@ article *{
 }
 
 img{
-    width: 50%;
-    height: 75%;
+    width: 25%;
+    height: 50%;
+    transition: all .2s ease-out;
+    outline: .3vmax solid rgba(233, 179, 74, 0);
+}
+
+img:hover{
+    transition: all .2s ease-in;
+    transform: scale(120%);
+    outline: .4vmax solid rgba(233, 179, 74, 1);
+    outline-offset: .5vmax;
+    border: .3vmax solid rgba(233, 179, 74, 1);
 }
 
 
@@ -139,18 +149,22 @@ section{
     min-height: 100vh;
 }
 
-section *{
+#specialSection{
     margin-block: 1vmax;
 }
 
-p:first-child{
-    text-align: left;
-    width: 50%;
+section *{
+    margin-block: 2vmax;
 }
-
-p:nth-child(n-1){
+p{
+    width: 50%;
     text-align: center;
 }
+
+#importantText{
+    text-align: left;
+}
+
 
 .hidden{
     opacity: 0;

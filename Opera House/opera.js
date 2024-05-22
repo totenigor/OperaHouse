@@ -63,3 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((element) => observer.observe(element));
 });
+
+
+const imgs = document.querySelectorAll('img');
+
+    imgs.forEach((img) => {
+        img.addEventListener("mouseover", () =>{
+            console.log('sigma'); //add music in here, change querySelectorAll to querySelector and make this function for individual img
+        })
+    })
