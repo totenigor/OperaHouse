@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const letters = document.querySelectorAll('.letter');
-    const targetText = 'OPERA';
+    const targetText = 'THEATRE';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const frameDuration = 100; // Duration of each frame in milliseconds
     const initialEffectDuration = 1000; // Duration of effect on the first letter in milliseconds
